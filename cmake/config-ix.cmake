@@ -59,7 +59,7 @@ if (LIBCXX_SUPPORTS_NODEFAULTLIBS_FLAG)
   endif ()
 endif ()
 
-if(NOT WIN32 OR MINGW)
+if(NOT WIN32 OR MINGW AND NOT CMAKE_CROSSCOMPILING)
   include(CheckLibcxxAtomic)
 endif()
 
